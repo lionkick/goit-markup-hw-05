@@ -1,21 +1,21 @@
 :root {
-  /* font */
+  /* & font */
   --main-font: 'Roboto', sans-serif;
   --logo-font: 'Raleway', sans-serif;
 
-  /* text colors */
+  /* & text colors */
   --name-color: #212121;
   --descr-color: #757575;
   --activ-color: #2196f3;
   --second-color: #ffffff;
 
-  /* background colors; */
+  /* & background colors; */
   --header-bg-color: #ffffff;
   --footer-bg-color: #2f303a;
   --activ-bg-color: #2196f3;
   --second-bg-color: #f5f4fa;
 
-  /* grid items */
+  /* & grid items */
   --items: 1;
   --indent: 30px;
 }
@@ -86,9 +86,9 @@ img {
 }
 
 /*
-==================================
--= Grid for collection of elements =-
-==================================
+~===================================
+~-= Grid for collection of elements =-
+~===================================
 */
 .grid {
   display: flex;
@@ -101,6 +101,11 @@ img {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
+/*
+~===================================
+~-= Buttons =-
+~===================================
+*/
 .button {
   font-family: inherit;
   text-align: center;
@@ -161,11 +166,12 @@ img {
 }
 
 /*
-==================================
--= Header section =-
-==================================
+~==================================
+~-= Header section =-
+~==================================
 */
-/* logo */
+
+/* & logo */
 
 .header {
   border-bottom: 1px solid #ececec;
@@ -199,7 +205,8 @@ img {
   color: #fff;
 }
 
-/* Navigation */
+/* & Navigation */
+
 .navigation-list {
   display: flex;
   align-items: center;
@@ -215,6 +222,7 @@ img {
 
 .navigation-link,
 .header-mailphone {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -233,7 +241,20 @@ img {
   color: var(--activ-color);
 }
 
-/* Mail & Phone */
+/* .navigation-link:hover::after, */
+.active-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--activ-color);
+}
+
+/* & Mail & Phone */
 .header-list {
   display: flex;
 }
@@ -258,9 +279,9 @@ img {
 }
 
 /*
-===================================
--= Hero section =-
-===================================
+~===================================
+~-= Hero section =-
+~===================================
 */
 .hero {
   max-width: 1600px;
@@ -296,9 +317,58 @@ img {
 }
 
 /*
-==================================
--= Cards Section =-
-==================================
+~==================================
+~-= Modal form =-
+~==================================
+*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 4px;
+  width: 528px;
+  height: 581px;
+
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+/*
+~==================================
+~-= Cards Section =-
+~==================================
 */
 
 .cards-item {
@@ -331,9 +401,9 @@ img {
 }
 
 /*
-==================================
--= Section What do we do =-
-==================================
+~==================================
+~-= Section What do we do =-
+~==================================
 */
 .whatdowedo {
   /* padding-top: 94px; */
@@ -342,12 +412,39 @@ img {
 
 .whatdowedo-item-box {
   --items: 3;
+  position: relative;
+}
+
+.whatdowedo-item-box::before {
+  content: '';
+  display: block;
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.whatdowedo-item-subtitle {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  width: 100%;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
 }
 
 /*
-==================================
--= Our team section =-
-==================================
+~==================================
+~-= Our team section =-
+~==================================
 */
 .our-team {
   background-color: var(--second-bg-color);
@@ -385,9 +482,9 @@ img {
   padding-bottom: 30px;
 }
 /*
-==================================
--= Social icons =-
-==================================
+~==================================
+~-= Social icons =-
+~==================================
 */
 .socials {
   display: flex;
@@ -434,9 +531,9 @@ img {
 }
 
 /*
-==================================
--= Regular customers section =-
-==================================
+~==================================
+~-= Regular customers section =-
+~==================================
 */
 .regular-customers-list {
   display: flex;
@@ -472,9 +569,9 @@ img {
 }
 
 /*
-==================================
--= Portfolio section =-
-==================================
+~==================================
+~-= Portfolio section =-
+~==================================
 */
 
 .portfolio-name {
@@ -525,9 +622,9 @@ img {
 }
 
 /*
-==================================
--= Footer section =-
-==================================
+~==================================
+~-= Footer section =-
+~==================================
 */
 .footer {
   background-color: var(--footer-bg-color);
@@ -579,7 +676,6 @@ img {
 .join {
   display: flex;
   flex-direction: column;
-  /* padding-top: 72px; */
 }
 .join-title {
   font-weight: 700;
