@@ -230,7 +230,7 @@ img {
 
 .navigation-link,
 .header-mailphone {
-  position: relative;
+  /* position: relative; */
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -251,12 +251,13 @@ img {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--activ-color);
+  position: relative;
 }
 
 /* .navigation-link:hover::after, */
 .active-link::after {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   content: '';
   display: block;
@@ -569,9 +570,13 @@ img {
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .regular-customers-icon {
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .regular-customers-link:hover,
@@ -589,6 +594,34 @@ img {
 ~-= Portfolio section =-
 ~==================================
 */
+
+.portfolio-item-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-hidden-description {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 0;
+  top: 0;
+  padding: 63px 24px;
+  
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  color: #fff;
+
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item-slider:hover .portfolio-hidden-description {
+  transform: translateY(0);
+}
 
 .portfolio-name {
   color: var(--name-color);
