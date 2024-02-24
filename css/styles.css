@@ -1,21 +1,21 @@
 :root {
-  /* & font */
+  /* ^ font */
   --main-font: 'Roboto', sans-serif;
   --logo-font: 'Raleway', sans-serif;
 
-  /* & text colors */
+  /* ^ text colors */
   --name-color: #212121;
   --descr-color: #757575;
   --activ-color: #2196f3;
   --second-color: #ffffff;
 
-  /* & background colors; */
+  /* ^ background colors; */
   --header-bg-color: #ffffff;
   --footer-bg-color: #2f303a;
   --activ-bg-color: #2196f3;
   --second-bg-color: #f5f4fa;
 
-  /* & grid items */
+  /* ^ grid items */
   --items: 1;
   --indent: 30px;
 }
@@ -86,9 +86,9 @@ img {
 }
 
 /*
-~===================================
-~-= Grid for collection of elements =-
-~===================================
+^===================================
+^-= Grid for collection of elements =-
+^===================================
 */
 .grid {
   display: flex;
@@ -102,9 +102,9 @@ img {
 }
 
 /*
-~===================================
-~-= Buttons =-
-~===================================
+^===================================
+^-= Buttons =-
+^===================================
 */
 .button {
   font-family: inherit;
@@ -173,12 +173,12 @@ img {
 }
 
 /*
-~==================================
-~-= Header section =-
-~==================================
+^==================================
+^-= Header section =-
+^==================================
 */
 
-/* & logo */
+/* ^ logo */
 
 .header {
   border-bottom: 1px solid #ececec;
@@ -212,7 +212,7 @@ img {
   color: #fff;
 }
 
-/* & Navigation */
+/* ^ Navigation */
 
 .navigation-list {
   display: flex;
@@ -263,7 +263,7 @@ img {
   background-color: var(--activ-color);
 }
 
-/* & Mail & Phone */
+/* ^ Mail & Phone */
 .header-list {
   display: flex;
 }
@@ -288,9 +288,9 @@ img {
 }
 
 /*
-~===================================
-~-= Hero section =-
-~===================================
+^===================================
+^-= Hero section =-
+^===================================
 */
 .hero {
   max-width: 1600px;
@@ -326,9 +326,9 @@ img {
 }
 
 /*
-~==================================
-~-= Modal form =-
-~==================================
+^==================================
+^-= Modal form =-
+^==================================
 */
 
 .backdrop {
@@ -362,8 +362,8 @@ img {
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
   background: #fff;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms,
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal-wrapper {
@@ -373,7 +373,6 @@ img {
 
 .backdrop .modal-wrapper {
   transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
 }
 
 .modal-btn {
@@ -390,9 +389,9 @@ img {
 }
 
 /*
-~==================================
-~-= Cards Section =-
-~==================================
+^==================================
+^-= Cards Section =-
+^==================================
 */
 
 .cards-item {
@@ -425,9 +424,9 @@ img {
 }
 
 /*
-~==================================
-~-= Section What do we do =-
-~==================================
+^==================================
+^-= Section What do we do =-
+^==================================
 */
 .whatdowedo {
   /* padding-top: 94px; */
@@ -466,9 +465,9 @@ img {
 }
 
 /*
-~==================================
-~-= Our team section =-
-~==================================
+^==================================
+^-= Our team section =-
+^==================================
 */
 .our-team {
   background-color: var(--second-bg-color);
@@ -506,9 +505,9 @@ img {
   padding-bottom: 30px;
 }
 /*
-~==================================
-~-= Social icons =-
-~==================================
+^==================================
+^-= Social icons =-
+^==================================
 */
 .socials {
   display: flex;
@@ -558,9 +557,9 @@ img {
 }
 
 /*
-~==================================
-~-= Regular customers section =-
-~==================================
+^==================================
+^-= Regular customers section =-
+^==================================
 */
 .regular-customers-list {
   display: flex;
@@ -600,9 +599,9 @@ img {
 }
 
 /*
-~==================================
-~-= Portfolio section =-
-~==================================
+^==================================
+^-= Portfolio section =-
+^==================================
 */
 
 .portfolio-item-slider {
@@ -683,9 +682,9 @@ img {
 }
 
 /*
-~==================================
-~-= Footer section =-
-~==================================
+^==================================
+^-= Footer section =-
+^==================================
 */
 .footer {
   background-color: var(--footer-bg-color);
